@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Chỉ chạy test thuộc group "smoke": mvn clean test -DsuiteXmlFile=suites/smoke.xml -->
+<suite name="RISE CRM - Smoke" parallel="methods" thread-count="3" data-provider-thread-count="3" verbose="1">
+    <listeners>
+        <listener class-name="com.rise.listeners.SuiteConfigListener"/>
+        <listener class-name="com.rise.listeners.TestListener"/>
+        <listener class-name="com.rise.listeners.ReportListener"/>
+    </listeners>
+
+    <test name="RISE CRM - Smoke">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.rise.tests.*"/>
+        </packages>
+    </test>
+</suite>

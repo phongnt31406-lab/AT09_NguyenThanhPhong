@@ -1,0 +1,28 @@
+# Build
+target/
+
+# Toàn bộ output khi chạy test (allure, logs, screenshots, videos, surefire)
+reports/
+
+# Tài khoản test — chỉ commit file .example
+src/test/resources/configs/credentials.properties
+.env
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.class
+
+# Claude Code / công cụ recon
+.claude/settings.local.json
+.playwright-mcp/
+
+# OS
+.DS_Store
+Thumbs.db
+~$*.xlsx
+~$*.docx
+
+# Ảnh evidence chụp hệ thống thật — không đưa lên repo công khai
+docs/requirements/*/evidence/

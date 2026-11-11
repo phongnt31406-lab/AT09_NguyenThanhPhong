@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Chỉ chạy module Login: mvn clean test -DsuiteXmlFile=suites/login.xml -->
+<suite name="RISE CRM - Login" parallel="methods" thread-count="3" data-provider-thread-count="3" verbose="1">
+    <listeners>
+        <listener class-name="com.rise.listeners.SuiteConfigListener"/>
+        <listener class-name="com.rise.listeners.TestListener"/>
+        <listener class-name="com.rise.listeners.ReportListener"/>
+    </listeners>
+
+    <test name="Login Admin Page">
+        <packages>
+            <package name="com.rise.tests.login"/>
+        </packages>
+    </test>
+</suite>
